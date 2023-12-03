@@ -70,7 +70,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="container">
       <input
         type="text"
         placeholder="Search..."
@@ -103,8 +103,8 @@ function App() {
               <td>{user.email}</td>
               <td>{user.role}</td>
               <td>
-                <button onClick={() => editRow(user.id)}>Edit</button>
-                <button onClick={() => deleteRow(user.id)}>Delete</button>
+                <button className="edit" onClick={() => editRow(user.id)}>Edit</button>
+                <button className="delete" onClick={() => deleteRow(user.id)}>Delete</button>
               </td>
             </tr>
           ))}
@@ -119,7 +119,7 @@ function App() {
         <button onClick={() => handlePagination('last')}>Last</button>
       </div>
 
-      <button onClick={deleteSelected}>Delete Selected</button>
+      <button className="delete-selected" onClick={deleteSelected}>Delete Selected</button>
     </div>
   );
 }
